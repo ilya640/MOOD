@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
 
@@ -18,29 +18,25 @@
                 colorsCount = 7;
             }
             const colors = {
-
                 1: 'красный',
                 2: 'оранжевый',
                 3: 'жёлтый',
                 4: 'зелёный',
                 5: 'голубой',
                 6: 'синий',
-                7: 'фиолетовый'
+                7: 'фиолетовый',
             };
-            const usedColours = {}
+            const usedColours = {};
 
             console.log('цветов: ' + colorsCount);
-            for (let i = 1; i <= colorsCount; i++) {
 
+            while (Object.keys(usedColours).length < colorsCount) {
                 const n = randomDiap(1, 7);
                 if (!(n in usedColours)) {
                     const colorName = colors[n];
                     console.log(colorName);
-                    usedColours[n] = colorName
-                } else {
-                    i--;
+                    usedColours[n] = colorName;
                 }
-
             }
         }
 
