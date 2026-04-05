@@ -27,15 +27,16 @@
                 7: 'фиолетовый',
             };
             const usedColours = {};
-
+            let numberColours = 0;
             console.log('цветов: ' + colorsCount);
 
-            while (Object.keys(usedColours).length < colorsCount) {
+            while (numberColours < colorsCount) {
                 const n = randomDiap(1, 7);
                 if (!(n in usedColours)) {
                     const colorName = colors[n];
                     console.log(colorName);
                     usedColours[n] = colorName;
+                    numberColours++;
                 }
             }
         }
